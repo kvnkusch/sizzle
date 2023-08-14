@@ -1,0 +1,35 @@
+{
+  "name": "db-schema",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/db/schema/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/db/schema",
+        "main": "libs/db/schema/src/index.ts",
+        "tsConfig": "libs/db/schema/tsconfig.lib.json",
+        "assets": ["libs/db/schema/*.md"],
+        "generatePackageJson": true
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["coverage/libs/db/schema"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../../coverage/libs/db/schema"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/db/schema/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

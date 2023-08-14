@@ -1,0 +1,21 @@
+## TODOs
+
+- Monorepo configuration
+  - CI/CD (via Github Actions)
+    - Deploy web + server, standalone run migrations?
+    - nx-affected commands
+  - Labeling of libs to control imports (e.g. server can't import client, but can import utils, which can't import anything else)
+    - Wonder how tRPC will affect this
+  - Custom generators
+    - Server lib
+    - Client lib
+    - Utils / core lib
+- Testing
+  - Backend tests with database
+    - Investigate simply using one database for running all tests???
+    - docker-compose for running tests (aka spinning up database?)
+- tRPC
+  - Example of a protected route with narrowed context type (e.g. for an authenticated route)
+  - Is trpc-client lib at all helpful?
+- See if environment variable library is needed (e.g. for web and server?)
+  - Really only useful if env variables need to be used in a lib, but cannot be / is cumbersome to pass from the app
