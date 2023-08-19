@@ -4,7 +4,7 @@ import { Pool } from 'pg';
 import { seedDatabase } from '@sizzle/db/seed';
 
 dotenv.config({
-  path: './.env.local',
+  path: './apps/server/.env.local',
 });
 
 async function main() {

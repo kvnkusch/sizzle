@@ -6,7 +6,7 @@ import { Pool } from 'pg';
 // TODO: Should this run migrations for all environments?
 // If so, how will the config process work?
 dotenv.config({
-  path: './.env.local',
+  path: './apps/server/.env.local',
 });
 
 async function main() {
